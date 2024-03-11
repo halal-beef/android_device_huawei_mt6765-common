@@ -102,6 +102,8 @@ PRODUCT_PACKAGES += \
 
 # Logging
 PRODUCT_PACKAGES += \
+    libchrlog \
+    libhwlog \
     libxcollie
 
 # Media
