@@ -7,34 +7,16 @@ vendor/lib64/libaedv.so
 # Audio - from MRD-LX1-user 9 HUAWEIMRD-LX1 412-OVS-LGRP2 release-keys
 vendor/etc/smartpa_param/rt5509_param|8518661af78b7d64f0233c800a7c22ad76d6c21e
 vendor/etc/smartpa_param/rt_device.xml|82b02597e71dc9cbcfd652187266bed0987659cc
-vendor/firmware/cs35l41-aac-calib.bin|8cd410b651dd0d189f192bc0026621481f7554b8
-vendor/firmware/cs35l41-aac-default.bin|7b30b51dbefa09654018f225dd3ab6b75c1bd365
-vendor/firmware/cs35l41-aac-incall.bin|673e89fe5bef3c822f4bed751a3213c5354ac361
-vendor/firmware/cs35l41-aac-lowpower.bin|7b30b51dbefa09654018f225dd3ab6b75c1bd365
-vendor/firmware/cs35l41-aac-lowtemp.bin|9191f4fc7d2abaf8a644676f1053424b4b0865d8
-vendor/firmware/cs35l41-aac-mmi.bin|f2f51d6a1fa308b0c52cac2c21684c4815979278
-vendor/firmware/cs35l41-aac-music.bin|7b30b51dbefa09654018f225dd3ab6b75c1bd365
-vendor/firmware/cs35l41-aac-ringtone.bin|f2f51d6a1fa308b0c52cac2c21684c4815979278
-vendor/firmware/cs35l41-aac-ringtone_hs_spk.bin|f2f51d6a1fa308b0c52cac2c21684c4815979278
-vendor/firmware/cs35l41-aac-voip.bin|1df9f3ceced2fb1d3da609df9c6ccadc49d6af5c
-vendor/firmware/cs35l41-diag.wmfw|79c7a199f3af6b8eb56092489dc6cdf71e1e30f4
-vendor/firmware/cs35l41-gv-calib.bin|e87aa3e1b848a6fbc432531baeca6896978382f1
-vendor/firmware/cs35l41-gv-default.bin|9fb96eef616875d1831d9bcd769f42b6905f262b
-vendor/firmware/cs35l41-gv-incall.bin|6e61372d378b28b8fc4e635f9cfaa8739db1d5c8
-vendor/firmware/cs35l41-gv-lowpower.bin|9fb96eef616875d1831d9bcd769f42b6905f262b
-vendor/firmware/cs35l41-gv-lowtemp.bin|c0aefbe56fbbff3a400afc078d30e0b5276d92e5
-vendor/firmware/cs35l41-gv-mmi.bin|96dabaea712f15b9b8741038e69c73b0b100ca7f
-vendor/firmware/cs35l41-gv-music.bin|9fb96eef616875d1831d9bcd769f42b6905f262b
-vendor/firmware/cs35l41-gv-ringtone.bin|96dabaea712f15b9b8741038e69c73b0b100ca7f
-vendor/firmware/cs35l41-gv-ringtone_hs_spk.bin|96dabaea712f15b9b8741038e69c73b0b100ca7f
-vendor/firmware/cs35l41-gv-voip.bin|bb8aed60dea365da635219ab8f3b306619cf978b
-vendor/firmware/cs35l41.wmfw|e994cc8f95c7d00eaea7c07fc76dfdf3c6bfd77b
+vendor/firmware/tas2557_uCDSP_AAC.bin
+vendor/firmware/tas2557_uCDSP_DEFAULT.bin
+vendor/firmware/TAS2557_uCDSP.ftcfg
+vendor/firmware/tas2557_uCDSP_GK.bin
 vendor/firmware/tfa98xx_AAC.cnt|db055ac22eff54be93c1bbe463d56bf0cda4a558
 vendor/firmware/tfa98xx_GK.cnt|8b85fd3e8a74785dc49d8c7c57f9400dc1f7b154
 vendor/firmware/tfa98xx_NONE.cnt|8b85fd3e8a74785dc49d8c7c57f9400dc1f7b154
-vendor/lib/hw/audio.primary.mt6761.so|6d191ebb2bbfca16e6ad3bdcec5c35afb6e763cd
-vendor/lib/hw/audio.r_submix.mt6761.so|b68dc01fe95d8dbda9135fa7fb5db8c15d6a4cd3
-vendor/lib/hw/audio.usb.mt6761.so|28bf3c74e19f72a3f5c86922227677ad5588d697
+vendor/lib/hw/audio.primary.mt6765.so|6d191ebb2bbfca16e6ad3bdcec5c35afb6e763cd
+vendor/lib/hw/audio.r_submix.mt6765.so|b68dc01fe95d8dbda9135fa7fb5db8c15d6a4cd3
+vendor/lib/hw/audio.usb.mt6765.so|28bf3c74e19f72a3f5c86922227677ad5588d697
 vendor/lib/libMtkSpeechEnh.so|e95d0fa7150e28a05ebf319138f42ed595ddfeb7
 vendor/lib/libasd.so|51dfb684c78a333842cc4a0e01f58076ef4a751a
 vendor/lib/libaudio_custom_v2.so|8365d8e8ff2968355bf3fed1b41febee74bd78b0
@@ -229,14 +211,17 @@ vendor/lib/libcamalgo.asd.so|f979901c31fcb20a60eae8efb7c382373f0db697
 vendor/lib/libcamalgo.dngop.so|f721c5713a41df50ec2f4d09c446be3aab1cae43
 vendor/lib/libcamalgo.eis.so|d959f136818190b34074bc17af690325086084d6
 vendor/lib/libcamalgo.fdft.so|ea6a3d48bbd5552ec40321c0105ff8a990be7f79
+vendor/lib/libcamalgo.flicker.so
 vendor/lib/libcamalgo.fsc.so|b0068cf0ab146ce8a88f6d69a74c8b7a75fcf904
 vendor/lib/libcamalgo.ispfeature.so|e0989bdd310165c17866f5071b16be9efd8159cd
+vendor/lib/libcamalgo.lsc.so
 vendor/lib/libcamalgo.nr.so|368833c0defd5c8ea550fd61ffc3f8b79b2b05f1
-vendor/lib/libcamalgo.so|01f4824446ca2f6b2eaf8c293fe820e5afa1ee69
 vendor/lib/libcamalgo.utility.so|fe60912e75dc7645b4bd3d69abbc9faf3544a52f
 vendor/lib/libcamalgo.warp.so|f8e32930e12e733c49026b36b6c96fc1c308cbf2
-vendor/lib/libcamdrv.so|8928284bcf331677201258753c8d9ae8d455b262
+vendor/lib/libcamdrv_imem.so
+vendor/lib/libcamdrv_isp.so
 vendor/lib/libcamdrv_tuning_mgr.so|0836120927bddd426bbec5257d7880b8c2a0fc84
+vendor/lib/libcamdrv_twin.so
 vendor/lib/libcameracustom.eis.so|193e4e45c786df54e5a4e15e86d134326bade311
 vendor/lib/libcameracustom.so|00bc9f4d4165423929b5d5524cab60a19bbe9dd1
 vendor/lib/libhwcam_metadata_converter.so|5ec60b7bc4a9412f16e5cdb565958838cd112462
@@ -335,9 +320,9 @@ vendor/lib/egl/egl.cfg
 vendor/lib/egl/libEGL_mtk.so
 vendor/lib/egl/libGLESv1_CM_mtk.so
 vendor/lib/egl/libGLESv2_mtk.so
-vendor/lib/hw/dfps.mt6761.so
-vendor/lib/hw/gralloc.mt6761.so
-vendor/lib/hw/memtrack.mt6761.so
+vendor/lib/hw/dfps.mt6765.so
+vendor/lib/hw/gralloc.mt6765.so
+vendor/lib/hw/memtrack.mt6765.so
 vendor/lib/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.pq@2.2-impl.so
 vendor/lib/libIMGegl.so
@@ -367,10 +352,10 @@ vendor/lib/vendor.mediatek.hardware.pq@2.2.so
 vendor/lib64/egl/libEGL_mtk.so
 vendor/lib64/egl/libGLESv1_CM_mtk.so
 vendor/lib64/egl/libGLESv2_mtk.so
-vendor/lib64/hw/gralloc.mt6761.so
-vendor/lib64/hw/dfps.mt6761.so
-vendor/lib64/hw/hwcomposer.mt6761.so
-vendor/lib64/hw/memtrack.mt6761.so
+vendor/lib64/hw/gralloc.mt6765.so
+vendor/lib64/hw/dfps.mt6765.so
+vendor/lib64/hw/hwcomposer.mt6765.so
+vendor/lib64/hw/memtrack.mt6765.so
 vendor/lib/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.2-impl.so
 vendor/lib64/libIMGegl.so
@@ -407,21 +392,15 @@ vendor/etc/init/fuelgauged_nvram_init.rc|50d553439d88ac9ee006f5c3f8388f2911ecd38
 vendor/lib/libfgauge_gm30.so|2167e0df61ea8425c5413f36d4819d30961ce429
 
 # Gatekeeper - from MRD-LX1-user 9 HUAWEIMRD-LX1 412-OVS-LGRP2 release-keys
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service.huawei|2e4a1aad553f65816c2daf35e72506f26c76d9cd
-vendor/etc/init/android.hardware.gatekeeper@1.0-service.huawei.rc|1e99574b9122a52f154690d52f859aacfe591e93
-vendor/lib/hw/gatekeeper.mt6761.so|d4d0de5ad84f478d882c76b06e761b1a3f0bd087
-
-# GPS - from MRD-LX1-user 9 HUAWEIMRD-LX1 412-OVS-LGRP2 release-keys
-vendor/bin/hw/vendor.mediatek.hardware.gnss@1.1-service|0edfb78f46b48a27afeb72478eca409fe4d7c6c5
-vendor/etc/init/vendor.mediatek.hardware.gnss@1.1-service.rc|4567a91c1fc536624580659de02526a3a1bacd50
-vendor/etc/agps_profiles_conf2.xml|e37b0efb80fe7705975538d5debfff9bf7f4f06d
-vendor/lib/vendor.mediatek.hardware.gnss@1.1.so|a3f83e0af17928aabd1ba9ce2d1bd846ef83c029
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service|2e4a1aad553f65816c2daf35e72506f26c76d9cd
+vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc|1e99574b9122a52f154690d52f859aacfe591e93
+vendor/lib/hw/gatekeeper.mt6765.so|d4d0de5ad84f478d882c76b06e761b1a3f0bd087
 
 # Keymaster - from MRD-LX1-user 9 HUAWEIMRD-LX1 412-OVS-LGRP2 release-keys
-vendor/bin/hw/android.hardware.keymaster@3.0-service.huawei|5cb9191fc0fc24c9b58d9833433569edf3dfc454
-vendor/etc/init/android.hardware.keymaster@3.0-service.huawei.rc|0c4f3a03b81dad024eb312bd3c204068f791d94e
-vendor/lib/hw/keystore.mt6761.so|a8b6c045439e777aa8705853180aca122c04279c
-vendor/lib/hw/android.hardware.keymaster@3.0-impl-huawei.so|5d5e273d5388546248d2d92c39dfb1570e0609ea
+vendor/bin/hw/android.hardware.keymaster@3.0-service|5cb9191fc0fc24c9b58d9833433569edf3dfc454
+vendor/etc/init/android.hardware.keymaster@3.0-service.rc|0c4f3a03b81dad024eb312bd3c204068f791d94e
+vendor/lib/hw/keystore.mt6765.so|a8b6c045439e777aa8705853180aca122c04279c
+vendor/lib/hw/android.hardware.keymaster@3.0-impl.so|5d5e273d5388546248d2d92c39dfb1570e0609ea
 vendor/lib/libimonitor.so|26e36b8e02e0ed991d64b114a8666e04bb5a70ad
 
 # Ladder - from ares-user 13 TP1A.220624.014 V14.0.2.0.TKJCNXM release-keys
@@ -497,7 +476,6 @@ vendor/lib/libnvram.so
 vendor/lib/libnvram_daemon_callback.so
 vendor/lib/libnvram_platform.so
 vendor/lib/libnvram_sec.so
-vendor/lib/libnvramagentclient.so
 vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
 vendor/lib64/libcustom_nvram.so
@@ -507,7 +485,6 @@ vendor/lib64/libnvram.so
 vendor/lib64/libnvram_daemon_callback.so
 vendor/lib64/libnvram_platform.so
 vendor/lib64/libnvram_sec.so
-vendor/lib64/libnvramagentclient.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
@@ -584,7 +561,7 @@ vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so|0f37e78f40b5d96d759efc
 # Sensors - from MRD-LX1-user 9 HUAWEIMRD-LX1 412-OVS-LGRP2 release-keys
 vendor/bin/hw/vendor.huawei.hardware.sensors@1.0-service|6e6e38760433dfd3b8ba7f603b606933327433d4
 vendor/etc/init/vendor.huawei.hardware.sensors@1.0-service.rc|d91b49dd3be52d0cbc94aab8566588c80d3eba26
-vendor/lib/hw/sensors.mt6761.so|f15aebb42e4bfbf843cc2a8d13f6fe8c01d9ddb7
+vendor/lib/hw/sensors.mt6765.so|f15aebb42e4bfbf843cc2a8d13f6fe8c01d9ddb7
 vendor/lib/hw/vendor.huawei.hardware.sensors@1.0-impl.so|6a0161f74293f6b80bf174ec9e0783c82f685ca1
 vendor/lib/lib_sensor_fac_interface.so|c2e5836f8e738a6cee4b37e55a45a61892402bf3
 vendor/lib/libksensor.so|47656cdd7a504b08e1683f19a618dfca753d9da0
@@ -638,12 +615,11 @@ vendor/lib/libthermalalgo.so|7ef4fbbe67ddf2929aec83e2ffeb53ab61133b00
 
 # Wi-Fi - from full_px556_kw-user 10 QP1A.190711.020 1585833944 release-keys
 vendor/bin/hostapd_cli|2d267f7e8c00ef0d7ee6c683aa400cb176fcb25c
-vendor/bin/hw/android.hardware.wifi@1.0-service-lazy-mediatek|11de651333ef53a2d426fce3bb6d6d95544c27eb
+vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek|11de651333ef53a2d426fce3bb6d6d95544c27eb
 vendor/bin/hw/hostapd|ef3ae9d442f36473155730e0e48e6ff0470d3a71|fb9266b3ae653bba88a1f08ebb3b72539db0dad9
 vendor/bin/hw/wpa_supplicant|7ff5f67b28aca979dbf6edf291f50cb84fdfa7c7|9b69218f731872896e74a7398b250c79741f9ddb
-vendor/etc/init/android.hardware.wifi@1.0-service-lazy-mediatek.rc|bd3726847a0068d4e252b2d4f5c168b38b982074
+vendor/etc/init/android.hardware.wifi@1.0-service-mediatek.rc|bd3726847a0068d4e252b2d4f5c168b38b982074
 vendor/etc/init/hostapd.android.rc|0f8128bb83c4cbe80760f1a040960cfe439d2d6f
 vendor/lib64/libwapi.so|f2b823612ebbc045c90a44a4806165247fbbfad8
 vendor/lib64/libwifi-hal.so|bdc95a83b30b68a04ed1bce171f77586e6bc7262
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so|b71d1cac0a17c37a628dbfc806c47fec3addcca1
-vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.1.so|4af9d9e28dac45043c140e7db8ab15a68e6a95c7

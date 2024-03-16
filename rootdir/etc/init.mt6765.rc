@@ -1,0 +1,113 @@
+# MTK platform .rc configure
+
+import ${ro.vendor.rc}init.connectivity.rc
+import /vendor/etc/init/hw/init.mt6765.usb.rc
+import /vendor/etc/init/hw/init.project.rc
+import /vendor/etc/init/hw/init.modem.rc
+
+on early-init
+    write /proc/bootprof "INIT:early-init"
+    # boot perf. tune
+    write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "0 0 5 0"
+    write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp 0
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
+
+on init
+    # create io boost group
+    mkdir /dev/stune/io
+    chown root system /dev/stune/io
+    chown root system /dev/stune/io/tasks
+    chmod 0664 /dev/stune/io/tasks
+
+    # Support legacy paths
+    symlink /sdcard /mnt/sdcard
+
+    # if primary storage is physical, set ro.vold.primary_physical to 1
+    # setprop ro.vold.primary_physical 1
+
+# Temp Backward compatibility
+    mkdir /mnt/vendor/protect_f 0771 system system
+    mkdir /mnt/vendor/protect_s 0771 system system
+    mkdir /mnt/vendor/nvcfg 0771 system system
+
+#Create nvdata mount point
+    mkdir /mnt/vendor/nvdata 0771 system system
+# Create CIP mount point
+    mkdir /custom
+
+    mkdir /mnt/cd-rom 0000 system system
+
+# change lk_env permission
+    chown root system /proc/lk_env
+    chmod 0660 /proc/lk_env
+
+# increase sysctl_rmem_max and sysctl_wmem_max values to 2M
+    write /proc/sys/net/core/wmem_max 8388608
+    write /proc/sys/net/core/rmem_max 8388608
+
+# update cpus for cpuset cgroup
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/foreground/boost/cpus 0-7
+    write /dev/cpuset/background/cpus 4-7
+    write /dev/cpuset/system-background/cpus 2-7
+    write /dev/cpuset/top-app/cpus 0-7
+
+# update bg rt_runtime 100ms
+    write /dev/cpuctl/bg_non_interactive/cpu.rt_runtime_us 100000
+
+on late-init
+    write /proc/bootprof "INIT:late-init"
+
+# enable rcu_expedited
+    write /sys/kernel/rcu_expedited 1
+
+# mount different fs start
+
+on charger
+    write /proc/hps/enabled 0
+    write /sys/devices/system/cpu/cpu0/online 1
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/devices/system/cpu/cpu7/online 0
+    write /sys/devices/system/cpu/cpu6/online 0
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu4/online 0
+
+    exec /system/bin/e2fsck -f -p /dev/block/platform/bootdevice/by-name/cache
+    mount ext4 /dev/block/platform/bootdevice/by-name/cache /cache rw wait
+    chmod 0666 /dev/kmsg
+    chmod 0775 /mnt/vendor
+    mkdir /mnt/vendor/nvcfg
+    mount ext4 /dev/block/platform/bootdevice/by-name/nvcfg /mnt/vendor/nvcfg rw wait
+    chown system system /mnt/vendor/nvcfg
+    chmod 0771 /mnt/vendor/nvcfg
+    restorecon_recursive /mnt/vendor/nvcfg
+    write /sys/devices/platform/battery_meter/FG_daemon_log_level 7
+    write /sys/bus/platform/devices/battery/FG_daemon_log_level 7
+    write /sys/power/pm_async 0
+    start fuelgauged
+    start fuelgauged_nvram
+
+    chown system system /sys/class/leds/lcd-backlight/brightness
+    chown system system /sys/class/leds/red/brightness
+    chown system system /sys/class/leds/green/brightness
+
+    start servicemanager
+    start hwservicemanager
+    start light-hal-2-0
+
+on fs
+    write /proc/bootprof "INIT:Mount_START"
+    write /sys/kernel/debug/tracing/trace_marker "B|1|Mount"
+    mount_all /vendor/etc/fstab.mt6765 --early
+    exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/platform/bootdevice/by-name/userdata
+    write /sys/kernel/debug/tracing/trace_marker "E"
+    write /proc/bootprof "INIT:Mount_END"
+    write /sys/block/zram0/comp_algorithm lz4
+    write /proc/sys/vm/page-cluster 0
+
+on late-fs
+    # Mount RW partitions which need run fsck
+    mount_all /vendor/etc/fstab.mt6765 --late

@@ -5,7 +5,7 @@
 //
 
 runtime_resource_overlay {
-    name: "TetheringResOverlayMT6761",
+    name: "WifiResOverlayMT6765",
     sdk_version: "current",
     resource_dirs: ["res"],
     vendor: true,

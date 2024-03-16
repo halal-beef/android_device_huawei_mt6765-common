@@ -5,8 +5,8 @@
 //
 
 prebuilt_etc {
-    name: "fstab.mt6761",
-    src: "etc/fstab.mt6761",
+    name: "fstab.mt6765",
+    src: "etc/fstab.mt6765",
     vendor: true,
 }
 
@@ -25,22 +25,22 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.mt6761.rc",
-    src: "etc/init.mt6761.rc",
+    name: "init.mt6765.rc",
+    src: "etc/init.mt6765.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "init.mt6761.usb.rc",
-    src: "etc/init.mt6761.usb.rc",
+    name: "init.mt6765.usb.rc",
+    src: "etc/init.mt6765.usb.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "ueventd.mt6761.rc",
+    name: "ueventd.mt6765.rc",
     filename: "ueventd.rc",
-    src: "etc/ueventd.mt6761.rc",
+    src: "etc/ueventd.mt6765.rc",
     vendor: true,
 }

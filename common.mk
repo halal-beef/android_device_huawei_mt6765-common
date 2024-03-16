@@ -141,8 +141,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    TetheringResOverlayMT6761 \
-    WifiResOverlayMT6761
+    TetheringResOverlayMT6765 \
+    WifiResOverlayMT6765
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -206,17 +206,17 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.mt6761 \
-    fstab.mt6761_ramdisk \
+    fstab.mt6765 \
+    fstab.mt6765_ramdisk \
     init.connectivity.rc \
     init.modem.rc \
-    init.mt6761.rc \
-    init.mt6761.usb.rc \
-    ueventd.mt6761.rc
+    init.mt6765.rc \
+    init.mt6765.usb.rc \
+    ueventd.mt6765.rc
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.recovery.mt6761.rc:$(TARGET_RECOVERY_OUT)/root/init.recovery.mt6761.rc
+    $(LOCAL_PATH)/rootdir/etc/init.recovery.mt6765.rc:$(TARGET_RECOVERY_OUT)/root/init.recovery.mt6765.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -270,4 +270,4 @@ PRODUCT_PACKAGES += \
     libcompiler_rt-v29
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/huawei/mt6761-common/mt6761-common-vendor.mk)
+$(call inherit-product, vendor/huawei/mt6765-common/mt6765-common-vendor.mk)

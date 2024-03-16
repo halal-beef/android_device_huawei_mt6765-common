@@ -4,12 +4,12 @@
   SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.wifi.resources.mt6761">
+    package="com.android.networkstack.tethering.mt6765">
 
     <application android:hasCode="false" />
     <overlay
-      android:targetPackage="com.android.wifi.resources"
-      android:targetName="WifiCustomization"
+      android:targetPackage="com.android.networkstack.tethering"
+      android:targetName="TetheringConfig"
       android:isStatic="true"
       android:priority="0"/>
 </manifest>
