@@ -502,6 +502,9 @@ vendor/lib/liboeminfo.so|eb4ef05b5dddb7ec6c48badcc429da7ecb8a6ae3
 vendor/lib/vendor.mediatek.hardware.power@2.0.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
+# PowerVR Firmware
+vendor/firmware/rgx.fw
+
 # Radio - from MRD-LX1-user 9 HUAWEIMRD-LX1 412-OVS-LGRP2 release-keys
 vendor/bin/hw/mtkfusionrild|2eb7cf9d9fd7befd9d899ae74eae96af020175a8
 vendor/bin/ccci_mdinit|0c3d96840369eec6acc8de70871258e171d30c1c
